@@ -7,29 +7,29 @@
     </v-tabs>
 
     <div v-if="tab==1">
-    <form action="" >
-      <div class="form-group w-half">
+    <form class="add-new">
+      <div class="form-group width-half">
         <v-text-field
           label="First Name"
           id="first_name"
           v-model="user.first_name"
         />
       </div>
-      <div class="form-group w-half">
+      <div class="form-group width-half">
         <v-text-field
           label="Last Name"
           id="last_name"
           v-model="user.last_name"
         />
       </div>
-      <div class="form-group w-half">
+      <div class="form-group width-half">
         <v-text-field
           label="Username"
           id="username"
           v-model="user.username"
         />
       </div>
-      <div class="form-group w-half">
+      <div class="form-group width-half">
         <v-text-field
           label="Password"
           id="password"
@@ -43,7 +43,7 @@
           v-model="user.email"
         />
       </div>
-      <div class="form-group w-half">
+      <div class="form-group width-half">
         <v-select label="Status" id="status" :items="statuses" v-model="user.status"/>
       </div>
     </form>
@@ -139,11 +139,12 @@ export default {
 
 <style scoped>
 .add-new {
-  margin-top: 50px;
+  margin-top: 15px;
 }
-.w-half {
+.width-half {
   width: 50%;
   float: left;
+
 }
 .width-full {
   width: 100%;
@@ -154,29 +155,6 @@ form {
   flex-wrap: wrap;
 }
 .form-group {
-  display: flex;
-  flex-direction: column;
   padding: 5px;
-}
-.form-group label {
-  margin-bottom: 5px;
-}
-.form-group input,
-select {
-  padding: 5px;
-  border: 1px solid #5bb7d6;
-  border-radius: 5px;
-}
-.messages {
-  display: block;
-  margin-top: 30px;
-  width: 100%;
-  transition: all 0.25s ease-in-out;
-}
-input.submit {
-  background: #5bb7d6;
-  color: #000;
-  padding: 5px;
-  font-weight: bold;
 }
 </style>

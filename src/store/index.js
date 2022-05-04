@@ -10,7 +10,7 @@ export default  new Vuex.Store({
   state: {
     api_server: "http://localhost:3000",
     users: [],
-    users_count: 0,
+    //users_count: 0,
     permissions:[],
     user: {
       first_name: "",
@@ -21,13 +21,9 @@ export default  new Vuex.Store({
       status: 0,
     },
     filters: {
-      page: 1,
-      limit: 10,
+      //page: 1,
+      //limit: 10,
       status: -1,
-    },
-    notification: {
-      status: false,
-      message: "",
     },
   },
   getters: {},
